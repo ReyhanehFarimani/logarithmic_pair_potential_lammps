@@ -257,7 +257,7 @@ void PairLog::compute(int eflag, int vflag)
                 delz = delz/R[itype][jtype];   
                 rsq = delx * delx + dely * dely + delz * delz;  
                 r2inv = 1.0/rsq;
-                forcelog = -const_multi[itype][jtype] * pow(2.71828, (-rsq));
+                forcelog = -const_multi[itype][jtype] * pow(2.71828, (-2.71828 * rsq + 2.71828));
                 fpair = factor_lj* forcelog;
 
                 f[i][0] += delx*fpair;
@@ -273,7 +273,7 @@ void PairLog::compute(int eflag, int vflag)
 
                 if (eflag) 
                 {
-                    evdwl = const_multi[itype][jtype] * (pow(2.71828, (-rsq)));
+                    evdwl = const_multi[itype][jtype] * (pow(2.71828, (-2.71828 * rsq + 2.71828 -1)));
                     evdwl *= factor_lj;
                 }
                 if (evflag) ev_tally(i, j, nlocal, newton_pair, evdwl, 0.0, fpair, delx, dely, delz);
