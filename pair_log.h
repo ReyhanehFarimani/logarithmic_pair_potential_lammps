@@ -48,7 +48,7 @@ class PairLog : public Pair
     protected:
         double cut_global, const_multi_global, R_global;
         double **cut;
-        double **const_multi, **R; 
+        double **const_multi, **R, **Rsq; 
 
         void allocate();
 
