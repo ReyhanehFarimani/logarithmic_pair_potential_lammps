@@ -1,0 +1,24 @@
+
+
+
+2	 atoms
+
+
+2	atom types
+
+
+
+-21.0	21.0	xlo	xhi
+-21.0	21.0	ylo	yhi
+-21.0	21.0	zlo	zhi
+
+
+Masses
+
+1	1
+2	1
+
+Atoms
+
+1	1	1	0.01	0	0
+2	2	2	2.0	    0	0
